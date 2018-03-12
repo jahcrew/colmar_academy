@@ -1,36 +1,41 @@
-/* from Tom-moderator: One of my favorite ways to get coding is by starting off with this simple/blank template because it allows me to look at all aspects of my html elements before applying any complex styles. I can focus on the html elments size, position and display, very easily i can glance at my html page and not be overwhelmed by colors or images, etc.
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}/* from Tom-moderator: One of my favorite ways to get coding is by starting off with this simple/blank template because it allows me to look at all aspects of my html elements before applying any complex styles. I can focus on the html elments size, position and display, very easily i can glance at my html page and not be overwhelmed by colors or images, etc.
 So for myself it becomes easier to focus on getting the basic layout and styling before doing anything interesting with my projects. This is similar to prototyping/wireframing with applying a red border to every element, but i find that having a background is more convenient, and especially helpful for finding overlapping elements : */
 /* //CSS reset optional */
 *{
 background:rgba(0,0,0,.1);
 }
+
 *{
   color: #4a4a4a;
+  font-family: 'Roboto', sans-serif;
 }
-@fontface {font-family: 'Roboto', sans-serif;
-}
-
-/* for fixed header if needed:
-Does anyone know how to fix the header to the top of the page in MyTimes? When I try to use position: fixed along with a z-index, it's still on the same layer…
-position: fixed;…   z-index: 2;
-make sure you set body { margin: 0 } */
-
 .header {
   display: flex;
   height: 64px;
   font-size: 32px;
   align-items: center;
-  /* check if 2 commands below work */
   position: fixed;
-  z-index: 2;
+  background-color: white;
+  width: 100%;
 }
 
 .header img {
   padding-left: 24px;
   height: 100%;
-}
-
-.header span {
 }
 
 .header .colmar {
@@ -39,16 +44,48 @@ make sure you set body { margin: 0 } */
 
 li {
   display: inline-flex;
-  margin-left: 50px;
+  margin-left: 9rem;
+  /*  60px*/
   font-size: 24px;
-
 }
 
 .menu {
   margin-left: 30rem;
-
 }
+
 /* needed for header? */
 body {
   margin: 0;
+}
+
+.banner {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+  background-color: gray;
+}
+
+.banner img {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+.banner .banntext {
+  text-align: center;
+  padding-top: 10px;
+  width: 40%;
+  margin: 0 2rem;
+}
+
+.banner .headline {
+  font-size: 4rem;
+  font-weight: bold;
+  word-spacing: .04em;
+  letter-spacing: .03em;
+}
+
+.banner .subhead {
+  font-size: 2rem;
+  padding-top: 2rem;
 }
