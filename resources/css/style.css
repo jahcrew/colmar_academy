@@ -1,0 +1,54 @@
+/* from Tom-moderator: One of my favorite ways to get coding is by starting off with this simple/blank template because it allows me to look at all aspects of my html elements before applying any complex styles. I can focus on the html elments size, position and display, very easily i can glance at my html page and not be overwhelmed by colors or images, etc.
+So for myself it becomes easier to focus on getting the basic layout and styling before doing anything interesting with my projects. This is similar to prototyping/wireframing with applying a red border to every element, but i find that having a background is more convenient, and especially helpful for finding overlapping elements : */
+/* //CSS reset optional */
+*{
+background:rgba(0,0,0,.1);
+}
+*{
+  color: #4a4a4a;
+}
+@fontface {font-family: 'Roboto', sans-serif;
+}
+
+/* for fixed header if needed:
+Does anyone know how to fix the header to the top of the page in MyTimes? When I try to use position: fixed along with a z-index, it's still on the same layer…
+position: fixed;…   z-index: 2;
+make sure you set body { margin: 0 } */
+
+.header {
+  display: flex;
+  height: 64px;
+  font-size: 32px;
+  align-items: center;
+  /* check if 2 commands below work */
+  position: fixed;
+  z-index: 2;
+}
+
+.header img {
+  padding-left: 24px;
+  height: 100%;
+}
+
+.header span {
+}
+
+.header .colmar {
+  font-weight: bold;
+}
+
+li {
+  display: inline-flex;
+  margin-left: 50px;
+  font-size: 24px;
+
+}
+
+.menu {
+  margin-left: 30rem;
+
+}
+/* needed for header? */
+body {
+  margin: 0;
+}
