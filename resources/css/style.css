@@ -79,25 +79,24 @@ body {
   align-items: center;
   text-align: center;
   padding-top: 10px;
-  width: 30%;
+  width: 40%;
   margin: 0 2rem;
   font-family: 'Roboto', sans-serif;
 }
-.banner .banntext .btn {
 
-
-}
 .banner .headline {
   font-size: 4rem;
   font-weight: bold;
   word-spacing: .04em;
   letter-spacing: .03em;
+
 }
 
 .banner .subhead {
   font-size: 2rem;
   padding-top: 2rem;
 }
+
  .banner .btn {
     background-color: #4a4a4a;
     color: white;
@@ -105,7 +104,70 @@ body {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 2rem;
-    /* width: 40%; */
     letter-spacing: 1px;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
+.main {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+
+}
+.main .col1 {
+  flex-direction: column;
+  width: 60%;
+  text-align: left;
+  height: auto;
+}
+
+.col1 h1 {
+  font-size: 4rem;
+  padding-top: 32px;
+  padding-bottom: 24px;
+  font-weight: bold;
+}
+.col1 h3 {
+  font-size: 1.5rem;
+}
+#emanuel {
+  margin: 32px 0;
+}
+
+.main .col2 {
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+}
+
+.col2 img {
+  padding: 16px;
+  /* height: auto; */
+  width: 35%;
+}
+
+#orient {
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#orient .orientdate   {
+  font-weight: bold;
+  font-size: 1.75rem;
+
+}
+#orient .info {
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+}
+#orient .more {
+    font-size: 1.25rem;
+
+}
+.col2 #orient #campus #guest {
+  width: 65%;
+}
+/* vertical-align: middle; - this moves text up in Dev Tools but can't seem to target it here. */
