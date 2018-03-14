@@ -46,18 +46,17 @@ background:rgba(0,0,0,.1);
 li {
   display: inline-flex;
   margin-left: 9rem;
-  /*  60px*/
   font-size: 24px;
 }
 
 .menu {
   margin-left: 30rem;
 }
-
 /* needed for header? */
 body {
   margin: 0;
 }
+
 /* Banner Section */
 
 .banner {
@@ -89,7 +88,6 @@ body {
   font-weight: bold;
   word-spacing: .04em;
   letter-spacing: .03em;
-
 }
 
 .banner .subhead {
@@ -107,11 +105,15 @@ body {
     letter-spacing: 1px;
     font-size: 1.5rem;
 }
+
+/* Main Section  */
+
 .main {
   display: flex;
   font-family: 'Roboto', sans-serif;
 
 }
+
 .main .col1 {
   flex-direction: column;
   width: 60%;
@@ -125,9 +127,11 @@ body {
   padding-bottom: 24px;
   font-weight: bold;
 }
+
 .col1 h3 {
   font-size: 1.5rem;
 }
+
 #emanuel {
   margin: 32px 0;
 }
@@ -135,7 +139,7 @@ body {
 .main .col2 {
   flex-direction: column;
   width: 40%;
-  height: auto;
+
 }
 
 .col2 img {
@@ -150,24 +154,72 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  /* height: auto;*/
 }
 
 #orient .orientdate   {
   font-weight: bold;
   font-size: 1.75rem;
-
 }
+
 #orient .info {
   font-size: 1.25rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
-
 }
+
 #orient .more {
     font-size: 1.25rem;
-
 }
+
 .col2 #orient #campus #guest {
   width: 65%;
 }
 /* vertical-align: middle; - this moves text up in Dev Tools but can't seem to target it here. */
+
+#campus {
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#campus .campusinfo   {
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+#campus .info{
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+#campus .more {
+    font-size: 1.25rem;
+}
+
+#guest {
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* width: 65%; */
+}
+
+ #guest .guestinfo   {
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+#guest .info {
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+#guest .more {
+    font-size: 1.25rem;
+}
