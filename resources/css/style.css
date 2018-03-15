@@ -23,7 +23,10 @@ background:rgba(0,0,0,.1);
 *{
   color: #4a4a4a;
 }
+/* .container {
+  width: 960px; */
 
+}
 .header {
   display: flex;
   height: 64px;
@@ -65,6 +68,7 @@ body {
   align-items: center;
   padding-top: 64px;
   background-color: gray;
+  width: 100%;
 }
 
 .banner img {
@@ -126,6 +130,8 @@ body {
   padding-top: 32px;
   padding-bottom: 24px;
   font-weight: bold;
+  word-spacing: .04em;
+  letter-spacing: .03em;
 }
 
 .col1 h3 {
@@ -154,6 +160,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 55%;
   /* height: auto;*/
 }
 
@@ -183,6 +190,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 55%;
 }
 
 #campus .campusinfo   {
@@ -206,7 +214,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* width: 65%; */
+  width: 55%;
 }
 
  #guest .guestinfo   {
@@ -223,3 +231,52 @@ body {
 #guest .more {
     font-size: 1.25rem;
 }
+
+/* Learning Section */
+
+ .learning {
+   background-color: gray;
+   font-size: 4rem;
+   font-weight: bold;
+   text-align: center;
+   font-family: 'Roboto', sans-serif;
+   word-spacing: .04em;
+   letter-spacing: .03em;
+ }
+
+ .learning h1 {
+   padding-top: 32px;
+   padding-bottom: 32px;
+ }
+/* with just row1 it looks like a row; add row2 and it makes a column */
+ .learning .row1 {
+   display: flex;
+ }
+
+ .photos {
+   padding-right: 32px;
+   padding-left: 32px;
+
+ }
+ .photos .description {
+   background-color: white;
+   font-size: 1.75rem;
+   font-weight: bold;
+   padding-bottom: 8px;
+}
+   /* #software #computer #design  */
+ .photos .description p{
+   background-color: white;
+   font-size: 1.25rem;
+   font-weight: normal;
+   margin-top: 0;
+ }
+
+ .description .courses {
+   padding-top: 8px;
+   padding-bottom: 8px;
+ }
+
+ .description .more {
+   padding-bottom: 24px;
+ }
