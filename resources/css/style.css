@@ -248,35 +248,44 @@ body {
    padding-top: 32px;
    padding-bottom: 32px;
  }
-/* with just row1 it looks like a row; add row2 and it makes a column */
+
  .learning .row1 {
    display: flex;
+   justify-content:space-around;
  }
+
+.learning .row2 {
+  display: flex;
+  justify-content:space-around;
+}
 
  .photos {
    padding-right: 32px;
    padding-left: 32px;
-
  }
+
  .photos .description {
    background-color: white;
    font-size: 1.75rem;
    font-weight: bold;
-   padding-bottom: 8px;
+   padding: 24px 10px;
 }
-   /* #software #computer #design  */
+
+.photos img {
+  padding-top: 32px;
+}
+
+.photos img p {
+  width: 30%;
+}
+
  .photos .description p{
    background-color: white;
    font-size: 1.25rem;
    font-weight: normal;
-   margin-top: 0;
  }
 
  .description .courses {
    padding-top: 8px;
    padding-bottom: 8px;
- }
-
- .description .more {
-   padding-bottom: 24px;
  }
