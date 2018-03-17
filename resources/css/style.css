@@ -290,12 +290,6 @@ body {
 
  /* Thesis Section */
 
- .thesis {
-   display: flex;
-   font-family: 'Roboto', sans-serif;
- }
-
-/* this was initially centered ; figure out how I screwed it up */
  .exhibit{
    font-size: 4rem;
    font-weight: bold;
@@ -308,10 +302,19 @@ body {
    text-align: center;
  }
 
+ .thesis {
+   display: flex;
+   font-family: 'Roboto', sans-serif;
+ }
+
  .thesiscol1 {
    flex-direction: column;
    width: 60%;
  }
+
+ .thesiscol1 video {
+    width: 100%;
+}
 
 .thesiscol1  h1{
   font-size: 2rem;
@@ -324,19 +327,24 @@ body {
  .thesiscol2 {
    display: flex;
    flex-direction: column;
+   padding-left: 24px;
    width: 40%;
  }
 
 .thesiscol2 .img1  {
   display: flex;
   align-items: center;
-
+  padding-bottom: 16px;
 }
 
 .thesiscol2 .text {
   display: flex;
   flex-direction: column;
+  word-spacing: .04em;
+  letter-spacing: .03em;
   padding-left: 16px;
+  width: 50%;
+
 }
 
 .thesiscol2 .text .title1 {
@@ -354,6 +362,7 @@ body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 16px;
 
 
   /* height: 50%; */
