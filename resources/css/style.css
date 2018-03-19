@@ -22,7 +22,6 @@ background:rgba(0,0,0,.1);
 
 *{
   color: #4a4a4a;
-
 }
 
 .header {
@@ -327,7 +326,6 @@ body {
  .thesis {
    display: flex;
    font-family: 'Roboto', sans-serif;
-
  }
 
  .thesiscol1 {
@@ -380,8 +378,6 @@ body {
 .thesiscol2 .info1 {
   font-size: 1.6rem;
   padding-top: 16px;
-
-  /* border-bottom-style: solid grey; */
 }
 /* second row  */
 
@@ -390,8 +386,29 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding-top: 16px;
-
-
 }
+/* footer */
+
+.footer {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-top: 16px;
+  padding-left: 24px;
+  border-top: solid grey;
+}
+
+.copyright {
+  padding-left: 24px;
+  padding-bottom: 50px;
+}
+ .privacy {
+
+  padding-right: 5rem;
+ }
+ .terms {
+   padding-left: 70rem;
+ }
 
 /* Footer */
