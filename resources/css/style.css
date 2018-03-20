@@ -34,13 +34,16 @@ body {
   font-size: 32px;
   background-color: white;
   width: 100%;
+  position: fixed;
+
 }
  /* font not working when I target them all
  .header .colmar .academy .menu{
    font-family: 'Roboto', sans-serif;
  } */
 
-.header img {
+.header .lion {
+  display: inline-flex;
   padding-left: 24px;
   height: 100%;
 }
@@ -63,7 +66,7 @@ body {
 
  .menu {
   display: inline-flex;
-  margin-left: 65rem;
+  margin-left: 50rem;
   font-size: 24px;
   font-family: 'Roboto', sans-serif;
   padding-top: 16px;
@@ -93,12 +96,21 @@ li {
 
   .header .academy {
     display: none;
+ }
+
+  .header .lion {
+    display: none;
   }
 
  .mobile-nav {
    display: inline-flex;
    align-items: center;
+   padding-left: 50px;
+ }
+ .mobile-nav li {
+   padding: 20px;
    height: 100%;
+
  }
 }
 /* Banner Section */
@@ -181,6 +193,7 @@ li {
     text-align: left;
     padding: 15px 16px;
   }
+
 }
 
 /* Main Section  */
@@ -307,15 +320,55 @@ li {
 .main {
   flex-direction: column;
 }
+
 .main .col1 {
   display: none;
 }
+
 .main .col2 {
   padding-top: 16px;
   width: 100%;
-  /* supposed to be column; may need to add divs if time to do that */
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
+.col2 img {
+  /* padding: 30px; */
+  width: 100%;
+
+}
+
+.col2 #orient {
+  padding: 30px;
+  width: 100%;
+  text-align: left;
+}
+
+.col2 #campus {
+  padding: 30px;
+  width: 100%;
+  text-align: left;
+}
+
+.col2 #guest {
+  padding: 30px;
+  width: 100%;
+  text-align: left;
+}
+
+.col2 #orient .orientdate {
+  font-size: 2.5rem;
+
+}
+.col2 #campus .campusinfo {
+  font-size: 2.5rem;
+
+}
+.col2 #guest .guestinfo {
+  font-size: 2.5rem;
+}
 }
 /* Learning Section */
 
@@ -488,8 +541,8 @@ li {
 @media only screen and (max-width: 470px){
   .exhibit {
     font-size: 3rem;
-
   }
+
   .thesis .thesiscol2 {
     display: none;
   }
@@ -534,16 +587,25 @@ li {
  }
 
  /* mobile footer */
+
  @media only screen and (max-width: 470px){
-  .footer .terms .privacy {
+  .footer .terms  {
+    display: none;
+    padding-left: 0;
+  }
+
+  .footer .privacy {
     display: none;
   }
 
-  .footer{
-    /* display: flex; */
+ .footer .terms {
+    padding-left: 0;
+ }
 
-    /* justify-content: center; - makes it disappear
-    align-items: center; */
-    /* width: 100%; */
+  .footer .copyright{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 16px;
+
   }
  }
