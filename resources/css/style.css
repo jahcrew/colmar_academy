@@ -16,9 +16,9 @@
 /* from Tom-moderator: One of my favorite ways to get coding is by starting off with this simple/blank template because it allows me to look at all aspects of my html elements before applying any complex styles. I can focus on the html elments size, position and display, very easily i can glance at my html page and not be overwhelmed by colors or images, etc.
 So for myself it becomes easier to focus on getting the basic layout and styling before doing anything interesting with my projects. This is similar to prototyping/wireframing with applying a red border to every element, but i find that having a background is more convenient, and especially helpful for finding overlapping elements : */
 /* //CSS reset optional */
-*{
+/* *{
 background:rgba(0,0,0,.1);
-}
+} */
 
 *{
   color: #4a4a4a;
@@ -35,7 +35,7 @@ body {
   background-color: white;
   width: 100%;
   position: fixed;
-
+  border-bottom: solid grey;
 }
  /* font not working when I target them all
  .header .colmar .academy .menu{
@@ -107,10 +107,10 @@ li {
    align-items: center;
    padding-left: 50px;
  }
+
  .mobile-nav li {
    padding: 20px;
    height: 100%;
-
  }
 }
 /* Banner Section */
@@ -171,6 +171,7 @@ li {
     wrap: flex-wrap;
     padding-top: 0;
     padding-bottom: 32px;
+    background-color:lightgray;
   }
 
   .banner img  {
@@ -186,14 +187,13 @@ li {
     font-size: 2.75rem;
     text-align: left;
     padding: 32px 16px;
-
   }
+
   .banner .subhead {
     font-size: 1.75rem;
     text-align: left;
     padding: 15px 16px;
   }
-
 }
 
 /* Main Section  */
@@ -210,6 +210,11 @@ li {
   height: auto;
 }
 
+.col1 img {
+  padding-left: 24px;
+  padding-top: 16px;
+}
+
 .col1 h1 {
   font-size: 4rem;
   padding-top: 32px;
@@ -217,14 +222,21 @@ li {
   font-weight: bold;
   word-spacing: .04em;
   letter-spacing: .03em;
+  padding-left: 24px;
 }
 
 .col1 h3 {
   font-size: 1.5rem;
+  padding-left: 24px;
+  color: gray;
 }
 
 #emanuel {
   margin: 32px 0;
+}
+
+.main .col2mobile{
+  display: none;
 }
 
 .main .col2 {
@@ -236,6 +248,9 @@ li {
   padding: 16px;
   /* height: auto; */
   width: 35%;
+}
+.more{
+  color: #008080;
 }
 
 #orient {
@@ -257,16 +272,16 @@ li {
   font-size: 1.25rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  color: gray;
 }
 
 #orient .more {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .col2 #orient #campus #guest {
   width: 65%;
 }
-/* vertical-align: middle; - this moves text up in Dev Tools but can't seem to target it here. */
 
 #campus {
   display: inline-block;
@@ -277,15 +292,16 @@ li {
   width: 55%;
 }
 
-#campus .campusinfo   {
+#campus .campusinfo {
   font-weight: bold;
   font-size: 1.75rem;
 }
 
-#campus .info{
+#campus .info {
   font-size: 1.25rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  color: gray;
 }
 
 #campus .more {
@@ -310,65 +326,76 @@ li {
   font-size: 1.25rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
+  color: gray;
 }
 
 #guest .more {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
+  padding-bottom: 24px;
 }
 /* mobile main */
+
 @media only screen and (max-width: 470px){
 .main {
   flex-direction: column;
-}
+ }
 
 .main .col1 {
   display: none;
-}
+ }
 
 .main .col2 {
-  padding-top: 16px;
+  display: none;
+ }
+
+.main .col2mobile {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
   width: 100%;
   justify-content: center;
+  align-self: center;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-}
+ }
 
-.col2 img {
+.col2mobile img {
   /* padding: 30px; */
   width: 100%;
+ }
 
-}
-
-.col2 #orient {
+.col2mobile #orient {
   padding: 30px;
   width: 100%;
   text-align: left;
-}
+  margin-left: 2rem;
+ }
 
-.col2 #campus {
+.col2mobile #campus {
   padding: 30px;
   width: 100%;
   text-align: left;
-}
+  margin-left: 2rem;
+ }
 
-.col2 #guest {
+.col2mobile #guest {
   padding: 30px;
   width: 100%;
   text-align: left;
-}
+  margin-left: 2rem;
+  margin-right: 1rem;
+ }
 
-.col2 #orient .orientdate {
+.col2mobile #orient .orientdate {
   font-size: 2.5rem;
+ }
 
-}
-.col2 #campus .campusinfo {
+.col2mobile #campus .campusinfo {
   font-size: 2.5rem;
+ }
 
-}
-.col2 #guest .guestinfo {
+.col2mobile #guest .guestinfo {
   font-size: 2.5rem;
-}
+ }
 }
 /* Learning Section */
 
@@ -380,12 +407,13 @@ li {
    font-family: 'Roboto', sans-serif;
    word-spacing: .04em;
    letter-spacing: .03em;
+   padding-bottom: 24px;
  }
 
- .learning h1 {
-   padding-top: 32px;
-   padding-bottom: 32px;
-   text-align: center;
+  .learning h1 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-align: center;
  }
 
  .learning .row1 {
@@ -398,24 +426,24 @@ li {
   justify-content:space-between;
 }
 
- .photos {
+ .learning .photos {
    padding-right: 32px;
    padding-left: 32px;
    padding-top: 32px;
  }
 
- .photos .description {
+.learning .photos .description {
    background-color: white;
    font-size: 2rem;
    font-weight: bold;
    padding: 24px 10px;
 }
 
-.photos img p {
+.learning .photos img p{
   width: 30%;
 }
 
- .photos .description p{
+.photos .description p{
    background-color: white;
    font-size: 1.60rem;
    font-weight:lighter;
@@ -427,20 +455,26 @@ li {
    padding-bottom: 16px;
  }
  /* mobile learning */
+
  @media only screen and (max-width: 470px){
    .row1 {
     flex-direction: column;
 }
+
   .row2 {
-  flex-direction: column;
+    flex-direction: column;
 }
 
   .learning {
-   padding-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 60px;
+    background-color: white;
+    border-top: solid lightgray;
+    font-size: 3rem;
  }
 
  .photos img {
-  display: none;
+   display: none;
  }
 
  .photos .courses  {
@@ -451,11 +485,11 @@ li {
    display: none;
  }
 
- .photos .description {
+.learning .photos .description {
+   font-size: 1.6rem;
    padding: 16px 24px;
-   background-color: grey;
+   background-color: lightgray;
  }
-
 }
  /* Thesis Section */
 
@@ -483,17 +517,21 @@ li {
 
  .thesiscol1 video {
     width: 100%;
+    padding-left: 24px;
 }
 
 .thesiscol1  h1{
   font-size: 2rem;
   font-weight: bold;
+  padding-left: 24px;
 }
 
 .thesiscol1 h3{
   font-size: 1.6rem;
   padding-top: 16px;
   padding-bottom: 32px;
+  padding-left: 24px;
+  color: gray;
 }
 
  .thesiscol2 {
@@ -507,6 +545,8 @@ li {
   display: flex;
   align-items: center;
   padding-bottom: 16px;
+  padding-left: 16px;
+  padding-top: 24px;
 }
 
 .thesiscol2 .text {
@@ -526,6 +566,7 @@ li {
 .thesiscol2 .info1 {
   font-size: 1.6rem;
   padding-top: 16px;
+  color: gray;
 }
 /* second row  */
 
@@ -534,6 +575,7 @@ li {
   align-items: center;
   flex-wrap: wrap;
   padding-top: 16px;
+  padding-left: 16px;
 }
 
 /* mobile thesis */
@@ -541,6 +583,9 @@ li {
 @media only screen and (max-width: 470px){
   .exhibit {
     font-size: 3rem;
+    border-top: solid lightgray;
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 
   .thesis .thesiscol2 {
@@ -557,7 +602,6 @@ li {
 
   .thesis .thesiscol1  {
     width: 100%;
-    height:
   }
 }
 /* footer */
@@ -602,10 +646,11 @@ li {
     padding-left: 0;
  }
 
-  .footer .copyright{
+  .footer .copyright {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 16px;
-
+    padding-right: 40px;
+    font-size: 1rem;
   }
  }
