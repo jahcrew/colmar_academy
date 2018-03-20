@@ -304,6 +304,17 @@ li {
 }
 /* mobile main */
 @media only screen and (max-width: 470px){
+.main {
+  flex-direction: column;
+}
+.main .col1 {
+  display: none;
+}
+.main .col2 {
+  padding-top: 16px;
+  width: 100%;
+  /* supposed to be column; may need to add divs if time to do that */
+}
 
 }
 /* Learning Section */
@@ -364,9 +375,35 @@ li {
  }
  /* mobile learning */
  @media only screen and (max-width: 470px){
+   .row1 {
+    flex-direction: column;
+}
+  .row2 {
+  flex-direction: column;
+}
 
+  .learning {
+   padding-bottom: 32px;
  }
 
+ .photos img {
+  display: none;
+ }
+
+ .photos .courses  {
+   display: none;
+ }
+
+ .photos .more {
+   display: none;
+ }
+
+ .photos .description {
+   padding: 16px 24px;
+   background-color: grey;
+ }
+
+}
  /* Thesis Section */
 
  .exhibit{
@@ -445,9 +482,30 @@ li {
   flex-wrap: wrap;
   padding-top: 16px;
 }
-/* mobile thesis */
-@media only screen and (max-width: 470px){
 
+/* mobile thesis */
+
+@media only screen and (max-width: 470px){
+  .exhibit {
+    font-size: 3rem;
+
+  }
+  .thesis .thesiscol2 {
+    display: none;
+  }
+
+  .thesis .thesiscol1 h1 {
+    display: none;
+  }
+
+  .thesis .thesiscol1 h3 {
+    display: none;
+  }
+
+  .thesis .thesiscol1  {
+    width: 100%;
+    height:
+  }
 }
 /* footer */
 
@@ -459,21 +517,33 @@ li {
   padding-top: 16px;
   padding-left: 24px;
   border-top: solid grey;
+  font-family: 'Roboto', sans-serif;
 }
 
 .copyright {
   padding-left: 24px;
   padding-bottom: 50px;
 }
- .privacy {
 
+ .privacy {
   padding-right: 5rem;
  }
+
  .terms {
    padding-left: 70rem;
  }
+
  /* mobile footer */
  @media only screen and (max-width: 470px){
+  .footer .terms .privacy {
+    display: none;
+  }
 
+  .footer{
+    /* display: flex; */
+
+    /* justify-content: center; - makes it disappear
+    align-items: center; */
+    /* width: 100%; */
+  }
  }
-/* Footer */
