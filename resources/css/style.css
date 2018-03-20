@@ -23,6 +23,10 @@ background:rgba(0,0,0,.1);
 *{
   color: #4a4a4a;
 }
+/* needed for header? */
+body {
+  margin: 0;
+}
 
 .header {
   display: flex;
@@ -67,20 +71,36 @@ background:rgba(0,0,0,.1);
   padding-right: 8px;
 }
 
-li{
+li {
   align-items: center;
   padding-left: 16px;
   padding-right: 16px;
 }
-/*
+
 .mobile-nav {
   display: none;
 }
-/* needed for header? */
-body {
-  margin: 0;
-}
+/* mobile header */
 
+@media only screen and (max-width: 470px){
+  .header .menu {
+    display: none;
+  }
+
+  .header .colmar {
+    display: none;
+  }
+
+  .header .academy {
+    display: none;
+  }
+
+ .mobile-nav {
+   display: inline-flex;
+   align-items: center;
+   height: 100%;
+ }
+}
 /* Banner Section */
 
 .banner {
@@ -108,7 +128,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
 .banner .headline {
   font-size: 4rem;
   font-weight: bold;
@@ -130,6 +149,38 @@ body {
     margin-top: 2rem;
     letter-spacing: 1px;
     font-size: 1.5rem;
+}
+
+/* mobile banner */
+
+@media only screen and (max-width: 470px){
+  .banner {
+    flex-direction: column;
+    wrap: flex-wrap;
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  .banner img  {
+  padding-top: 0;
+  width: 100%;
+  }
+
+  .banner .banntext {
+    width: 100%;
+  }
+
+  .banner .headline {
+    font-size: 2.75rem;
+    text-align: left;
+    padding: 32px 16px;
+
+  }
+  .banner .subhead {
+    font-size: 1.75rem;
+    text-align: left;
+    padding: 15px 16px;
+  }
 }
 
 /* Main Section  */
@@ -251,7 +302,10 @@ body {
 #guest .more {
     font-size: 1.25rem;
 }
+/* mobile main */
+@media only screen and (max-width: 470px){
 
+}
 /* Learning Section */
 
  .learning {
@@ -307,6 +361,10 @@ body {
  .description .courses {
    padding-top: 16px;
    padding-bottom: 16px;
+ }
+ /* mobile learning */
+ @media only screen and (max-width: 470px){
+
  }
 
  /* Thesis Section */
@@ -387,6 +445,10 @@ body {
   flex-wrap: wrap;
   padding-top: 16px;
 }
+/* mobile thesis */
+@media only screen and (max-width: 470px){
+
+}
 /* footer */
 
 .footer {
@@ -410,5 +472,8 @@ body {
  .terms {
    padding-left: 70rem;
  }
+ /* mobile footer */
+ @media only screen and (max-width: 470px){
 
+ }
 /* Footer */
